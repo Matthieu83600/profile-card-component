@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;700&display=swap");
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
+}
+/* Reset */
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Globales */
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--very-dark-desaturated-blue);
+  background-color: var(--dark-cyan);
+  background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat, no-repeat;
+}
+.container {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+.card {
+  min-width: 21.875rem;
+  background-color: var(--white);
+  border-radius: 0.9375rem;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.5);
+  overflow: hidden;
+}
+.card__profile {
+  background-image: url("./images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  height: 140px;
+  margin-bottom: 72px;
+}
+.card__profile img {
+  position: absolute;
+  top: 92px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  outline: 5px solid var(--white);
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__content-title span {
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+  margin-left: 8.5px;
+}
+.card__content-location {
+  margin-top: 8px;
+  margin-bottom: 28px;
+  color: var(--dark-grayish-blue);
+}
+.card__demarcation {
+  width: 100%;
+  border: 1px solid rgba(150, 150, 150, 0.5);
+}
+.card__content-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 54px 24px 47px;
+  width: 100%;
+}
+.card__content-stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+.card__content-stats-item-number {
+  font-weight: 700;
+}
+.card__content-stats-item-name {
+  letter-spacing: 1.5px;
+  font-weight: 200;
+}
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
